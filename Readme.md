@@ -2,7 +2,7 @@
 
 ### Description
 
-This repository contains exercises and mini-projects to practice and refresh JavaScript fundamentals, including variables, functions, loops, DOM manipulation, and ES6 features.
+This repository contains exercises to practice and refresh JavaScript fundamentals, including variables, functions, loops, and ES6 features.
 
 ### Installation
 
