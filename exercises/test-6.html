@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TEST-6.js</title>
+    </head>
+    <body>
+        <p id="message">Hello</p>
+        <button id = "Monbouton">Changer le texte</button>
+        <div>
+            <span id ="compteur">0</span>
+            <button id ="Positive">+</button>
+            <button id ="Negative">-</button>
+        </div>
+
+    </body>
+    <script>
+        const compteurcolor = document.getElementById("compteur")
+        const p = document.getElementById("message");
+        p.textContent = "Bonjour";
+        p.style.color = "blue";
+
+        const bouton = document.getElementById("Monbouton");
+            bouton.addEventListener("click", () => {
+                alert("Cliqué !");
+                p.textContent = "Hola";
+                p.style.color = "red";
+            })
+
+        let compteur = 0;
+        const comptage = () => {
+            compteur++;
+            document.getElementById("compteur").textContent = compteur;
+            colorC();
+        };
+
+        const soustraire = () => {
+            compteur--;
+            document.getElementById("compteur").textContent = compteur;
+            colorC();
+        };
+
+        const colorC = () => {
+            compteurcolor.textContent = compteur;
+
+            if (compteur > 0) {
+                compteurcolor.style.color = "green";
+            } else if (compteur < 0) {
+                compteurcolor.style.color = "red";
+            } else {
+                compteurcolor.style.color = "black";
+
+            }
+        };
+
+        document.getElementById("Positive").addEventListener("click", comptage);
+        document.getElementById("Negative").addEventListener("click", soustraire);
+
+    </script>
+</html>
